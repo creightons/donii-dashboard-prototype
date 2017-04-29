@@ -1,0 +1,134 @@
+@import 'reset';
+
+
+/*****************************
+* Constants
+*****************************/
+
+// Colors
+$sidebar-color: rgb(42, 42, 41);
+
+$donii-primary: rgb(83, 163, 152);
+$donii-background: rgb(249, 249, 249);
+$toolbar-primary: rgb(241, 241, 241);
+$text-color: black;
+$white: #fff;
+
+// Fonts
+@import url(https://fonts.googleapis.com/css?family=Lato);
+
+
+// Sizes
+$sidebar-width: 320px;
+$card-padding: 16px;
+$main-font-size: 18px;
+
+/*****************************
+* Classes
+*****************************/
+
+body {
+	font-family: 'Lato';
+	background-color: $donii-background;
+}
+
+.sidebar {
+	position: fixed;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	width: $sidebar-width;
+	background-color: $sidebar-color;
+}
+
+.main-content {
+	margin-left: $sidebar-width;
+}
+
+.sidebar-logo {
+	display:block;
+	width: 220px;
+	font-size: 20px;
+	padding: 40px 0;
+	margin: 0 auto;
+}
+
+.navbar {
+	background-color: $donii-primary;
+	height: 56px;
+}
+
+.toolbar {
+	background-color: $toolbar-primary;
+	color: $text-color;
+	font-size: 16px;
+	padding: 24px;
+	box-shadow: 0 1px 8px 0 rgba(0,0,0,.2),0 3px 4px 0 rgba(0,0,0,.14),0 3px 3px -2px rgba(0,0,0,.12);
+}
+
+.content {
+	display: flex;
+	padding: 20px 100px;
+}
+
+.card-container {
+	flex: 3;
+}
+
+.timeline-container {
+	flex: 1;
+}
+
+.card-row {
+	display: flex;
+	height: 220px;
+}
+
+.flex-card {
+	flex: 1;
+}
+
+.card {
+	background-color: $white;
+	box-shadow: 0 1px 3px 0 rgba(0,0,0,.2), 0 1px 1px 0 rgba(0,0,0,.14), 0 2px 1px -1px rgba(0,0,0,.12);
+	margin: 5px;
+	padding: $card-padding;
+}
+
+.card-header {
+	font-size: 18px;
+	color: $text-color;
+}
+
+.total-value-card, .wishlist-card {
+	flex: 1;
+}
+
+.user-impact-card {
+	flex: 2;
+}
+
+.total-value-display {
+	font-size: 26px;
+	color: $donii-primary;
+	text-align: center;
+	margin-top: 60px;
+	cursor: pointer;
+}
+
+.wish-list-summary {
+	list-style-type: disc;
+	padding-left: 25px;
+	padding-top: 20px;
+}
+
+.wish-list-item {
+	color: $donii-primary;
+	font-size: 20px;
+	padding: 10px;
+	cursor: pointer;
+}
+
+.user-impact-story {
+	padding-top: 25px;
+}
