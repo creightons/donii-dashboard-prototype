@@ -91,7 +91,10 @@ body {
 .card {
 	background-color: $white;
 	box-shadow: 0 1px 3px 0 rgba(0,0,0,.2), 0 1px 1px 0 rgba(0,0,0,.14), 0 2px 1px -1px rgba(0,0,0,.12);
-	margin: 5px;
+	margin-top: 0px;
+	margin-left: 5px;
+	margin-right: 5px;
+	margin-bottom: 15px;
 	padding: $card-padding;
 }
 
@@ -136,4 +139,88 @@ body {
 #doner-graph {
 	padding-top: 20px;
 	height: 230px;
+
+	.ct-bar {
+		stroke: $donii-primary;
+	}
+}
+
+.table {
+	margin-top: 20px;
+}
+
+.table-row {
+	display: flex;
+	//margin-bottom: 10px;
+	padding: 10px 0;
+	border-bottom: 1px solid $donii-primary;
+}
+
+.table .table-row:last-child {
+	border-bottom: none;
+}
+
+.table-cell {
+	flex: 1;
+	text-align: center;
+	justify-content: space-around;
+}
+
+.table-cell-item {
+	font-size: 14px;
+}
+
+.table-cell-header {
+	font-size: 16px;
+}
+
+.timeline-header {
+	font-size: 18px;
+	color: $text-color;
+	text-align: center;
+	margin-bottom: 40px;
+}
+
+.timeline {
+	position: relative;
+
+	padding-left: 50px;
+
+	box-sizing: border-box;
+	&:before {
+		content: '';
+		position: absolute;
+		background-color: rgba(0,0,0,.1);
+		width: 4px;
+		left: 30px;
+
+		// Make the height larger than the container, then shift
+		// the timeline bar up by half of the extra amount over 100% of the height.
+		height: 106%;
+		top: -3%;
+	}
+}
+
+.timeline-card {
+	position: relative;
+
+	&:before {
+		position: absolute;
+		content: '';
+		background-color: $white;
+		width: 9px;
+		height: 9px;
+		border-radius: 50%;
+		border: 3px solid $donii-primary;
+		left: -16%;
+		top: 50%;
+		transform: translateY(-50%);
+	}
+}
+
+.timeline-expected-date {
+	color: $donii-primary;
+	font-size: 14px;
+	font-style: italic;
+	margin-bottom: 5px;
 }
