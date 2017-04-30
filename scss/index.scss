@@ -1,5 +1,5 @@
 @import 'reset';
-
+@import 'chartist.min';
 
 /*****************************
 * Constants
@@ -131,4 +131,9 @@ body {
 
 .user-impact-story {
 	padding-top: 25px;
+}
+
+#doner-graph {
+	padding-top: 20px;
+	height: 230px;
 }
