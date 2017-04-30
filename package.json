@@ -1,7 +1,7 @@
 {
-  "name": "donii-company-account-prototype",
+  "name": "donii-company-dashboard-prototype",
   "version": "1.0.0",
-  "description": "A prototype of an account page for companies partnering with Donii",
+  "description": "A prototype of an dashboard page for companies partnering with Donii",
   "scripts": {
     "build-js": "browserify  -t reactify -t [ babelify --presets [ es2015 ] --plugins [ transform-object-rest-spread ] ]  -t envify ./src/index.js > dist/build.js",
     "watch-js": "watchify  --debug --verbose -t reactify -t [ babelify --presets [ es2015 ] --plugins [ transform-object-rest-spread ] ] -t envify ./src/index.js -o dist/build.js",
